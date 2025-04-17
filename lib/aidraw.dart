@@ -387,6 +387,9 @@ class AiDrawState extends State<AiDraw> with WidgetsBindingObserver{
       memConfig.cfg ??= 7;
       sdConfig = memConfig;
     });
+	  if (widget.msg != null){
+		  makeRequest();
+	  }
   }
 
   @override
