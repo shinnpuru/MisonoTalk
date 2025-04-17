@@ -290,7 +290,7 @@ class MainPageState extends State<MainPage> with WidgetsBindingObserver{
                   controller.text = "正在生成...";
                   String prompt = "";
                   List<List<String>> msg = parseMsg(await getPrompt(), messages);
-                  msg.add(["user", "system instruction:暂停角色扮演，根据上下文，详细描述$studentName现在的穿着与状态。"]);
+                  msg.add(["user", "system instruction:暂停角色扮演，根据上下文，用提示词详细描述$studentName现在的状态。提示词应该是一系列描述性的英语单词或短语，例如chair, sitting, sky。你的提示词：1girl,"]);
                   completion(config, msg, (resp){
                     const String a="我无法继续作为",b="代替玩家言行";
                     prompt += resp;
